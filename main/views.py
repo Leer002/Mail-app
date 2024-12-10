@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.conf import settings
 from django.views import View
@@ -24,3 +23,4 @@ class SendMailPage(View):
         else:
             context["result"] = "All fields are reqired"
         return render(request, "main/mail.html", context=context)
+                
